@@ -38,6 +38,12 @@ scikit-learn==1.6.1
 nltk==3.9.1
 ```
 
+## AlphaSet Dataset
+
+**AlphaSet** is a curated benchmark dataset designed to evaluate model editing algorithms under scenarios involving conflicting and inconsistent knowledge.  It encompasses a diverse range of editing cases with varying degrees of knowledge conflict and inconsistency, effectively simulating real-world situations encountered in model editing applications.
+
+We provide a subset of AlphaSet in this repository for reproducibility and experimental validation.  You can find sample data and usage instructions in the `AlphaSet/` directory.
+
 
 ## Quick Start
 
