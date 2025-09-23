@@ -69,21 +69,8 @@ python3 -m experiments.evaluate \
     --downstream_eval_steps=1
 ```
 
-### 2. Advanced Configuration
 
-#### AlphaEdit<sup>+</sup> Hyperparameters
-
-Key parameters specific to AlphaEdit<sup>+</sup>:
-
-- `nullspace_threshold`: Base threshold for null-space projection (default: 0.015)
-- `nullspace_searchthreshold`: Threshold for adaptive expansion (default: 0.00018)
-- `CK0`, `CKP`, `KI`: Contrastive knowledge component flags
-- `r`: Residual norm threshold for trajectory optimization
-- `beta`: Sequential editing preservation weight
-- `L2`: Regularization strength
-
-
-### 3. Understanding Results
+### 2. Understanding Results
 
 Results are stored in structured format at `results/AlphaEdit_plus/run_<run_id>/`:
 
@@ -97,7 +84,7 @@ results/
         └── ...                 # Additional edits
 ```
 
-### 4. Results Summary and Analysis
+### 3. Results Summary and Analysis
 
 #### Summarize Results Across Multiple Runs
 
