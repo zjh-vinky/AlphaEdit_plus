@@ -41,5 +41,7 @@ MODEL_NAME_TO_MAXIMUM_CONTEXT_LENGTH_MAP = {
     "eleutherai_gpt-j-6b": 2048,
     "gpt2-j": 2048,
     "gpt2-large": 1024,
-    "gpt2-medium": 1024
+    "gpt2-medium": 1024,
+    "qwen3-4b-thinking-2507": 2048,
+    "qwen3-14b": 4096,
 }
