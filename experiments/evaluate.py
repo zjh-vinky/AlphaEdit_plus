@@ -64,7 +64,6 @@ DS_DICT = {
     "cf": (CounterFactDataset, compute_rewrite_quality_counterfact),
     "zsre": (MENDQADataset, compute_rewrite_quality_zsre),
     "mquake": (MQUAKEDataset, compute_rewrite_quality_mquake),
-    "sample": (SampleDataset, compute_rewrite_quality_samples),
     "alphaset": (AlphasetDataset, compute_rewrite_quality_alphaset)
 }
 
@@ -83,12 +82,6 @@ def main(
     num_edits: int = 1,
     use_cache: bool = False,
 ):
-
-    seed = 42
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
 
     # Set algorithm-specific variables
     params_class, apply_algo = ALG_DICT[alg_name]
@@ -220,7 +213,7 @@ def main(
                 P = torch.zeros((len(hparams.layers), W_out.shape[0], W_out.shape[0]), device="cpu")
             elif alg_name == "AlphaEdit_plus":
                 P = torch.zeros((len(hparams.layers), W_out.shape[0], W_out.shape[0]), device="cpu")
-        elif hparams.model_name in ["EleutherAI_gpt-j-6B","Llama3-8B","phi-1.5"]:
+        elif hparams.model_name in ["EleutherAI_gpt-j-6B","Llama3-8B","phi-1.5","Qwen3-4B-Thinking-2507","Qwen3-14B"]:
             cache_c = torch.zeros((len(hparams.layers), W_out.shape[1], W_out.shape[1]), device="cpu")
             if alg_name == "AlphaEdit" or alg_name == "AlphaEdit_plus":
                 P = torch.zeros((len(hparams.layers), W_out.shape[1], W_out.shape[1]), device="cpu")
