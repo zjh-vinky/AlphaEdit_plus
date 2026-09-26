@@ -1,5 +1,13 @@
 # AlphaEdit<sup>+</sup>: Model Editing in the Presence of Conflicting and Inconsistent Knowledge
 
+## 🎉 News
+
+We are thrilled to announce that our paper has been accepted to the **ACL Findings 2026**! Congratulations to the entire team! 🥳
+
+📄 **Paper:** [AlphaEdit<sup>+</sup>: Model Editing in the Presence of Conflicting and Inconsistent Knowledge](https://aclanthology.org/2026.findings-acl.728/)
+
+
+
 **AlphaEdit<sup>+</sup>** is an enhanced knowledge editing method built upon the original AlphaEdit framework, which minimizes disruption to preserved knowledge by projecting parameter perturbations onto the null space of key matrices. While AlphaEdit effectively balances knowledge update and preservation under typical conditions, it struggles when faced with high knowledge conflicts (between new, preserved, and previously edited facts) and severe inconsistencies (where target values diverge significantly from the model's current beliefs).
 
 
